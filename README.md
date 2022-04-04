@@ -1,4 +1,5 @@
-# app
+# electron-music
+一个简单的音乐下载器
 
 ## Project setup
 ```
