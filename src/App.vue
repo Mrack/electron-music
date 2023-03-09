@@ -92,7 +92,7 @@ export default {
     },
     onDownload(rid, br) {
       const KW = require('./kwDES')
-      var url = "https://nmobi.kuwo.cn/mobi.s?f=kuwo&q=" + KW.encryptQuery("type=convert_url2&br=" + br + "&rid=" + rid)
+      var url = "https://nmobi.kuwo.cn/mobi.s?f=kuwo&q=" + KW.encryptQuery("user=0&prod=kwplayer_ar_6.8.9.0&corp=kuwo&vipver=6.8.9.0&source=kwplayer_ar_6.8.9.0_lenovo02.apk&p2p=1&type=convert_url2&br=" + br + "&rid=" + rid)
       // console.log(url);
       axios.get(url).then((v) => {
         this.dialogContent = v.data.split("\r\n")[2].replaceAll("url=", "");
